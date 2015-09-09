@@ -2,14 +2,16 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
 
-Some information about you!
+
+Read. Think. Write.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Android developer.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[gelitenight@gmail.com](mailto:gelitenight@gmail.com)
