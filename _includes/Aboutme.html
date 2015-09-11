@@ -1,0 +1,19 @@
+<div class="sidebar-module about">
+  <h4>{{ site.locales[site.default_locale].Aboutme }}</h4>
+  {% if site.aboutme_photo %}
+  <img title="{{site.author}}" src="{{site.aboutme_photo}}" alt="{{site.author}}"/>
+  {% endif %}
+  <span>{{site.aboutme}}</span>
+  <br />
+
+  {% if site.ShowContactInfo == "True" %}
+  {% if site.email %}
+  <a href="mailto:{{site.email}}" title="mailto: {{site.email}}">Email</a> /
+  {% endif %}
+  {% if site.github_username %}
+  <a href="https://github.com/{{site.github_username}}" title="GithubID: {{site.github_username}}">Github</a>
+  {% endif %}
+
+  {% endif %}
+
+</div>

@@ -1,79 +1,68 @@
-#
-# This file contains configuration flags to customize your site
-#
+### Site info:
+title: Lost Canvas
+tagline: 阅读。思考。记录。
+author: gelitenight
+email: gelitenight@gmail.com
+description: "Read. Think. Write." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
+keywords: "android, developer"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://gelitenight.github.io" # the base hostname & protocol for your site
+locale: cn
 
-# Name of your site (displayed in the header)
-name: Lost Canvas
-
-# Short bio or description (displayed in the header)
-description: Android Developer
-
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
-
-#
-# Flags below are optional
-#
-
-# Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble:
-  email: gelitenight@gmail.com
-  facebook:
-  flickr:
-  github: gelitenight
-  instagram:
-  linkedin:
-  pinterest:
-  rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter:
-  stackoverflow: users/2641665/gelitenight # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
+### Personal info and site tools info:
+twitter_username: 
+github_username:  gelitenight
+disqus_shortname: 
+favicon: "/images/favicon.ico"
+aboutme: "安卓开发" # these are shown on aboutme-sidebar.
+aboutme_photo: # your photo.
 
 
-# Enter your Disqus shortname (not your username) to enable commenting on posts
-# You can find your shortname on the Settings page of your Disqus account
-disqus:
+### Site setting:
+ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on aboutme-sidebar, those info only shown when ShowContactInfo == True
+default_column: "two" # blog style: two columns, if default_column != "two", you will see a one column blog.
+default_locale: "cn" # blog sidebar language set, only include: English(en) and Chinese (cn)
 
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+locales:
+    en:
+      Aboutme: "About Me"
+      Archives: "Archives"
+      Blogroll: "Blogroll"
+      Categories: "Categories"
+      Copyright_Notice: "Copyright Notice"
+      Recent_Posts: "Recent Posts"
+      Tags: "Tags"
+      Previous: "Older"
+      Next: "Newer"
+      PostedInCategories: "Posted in"
+      Taggedwith: "and tagged"  
+      PostDate: "on "
+    cn:
+      Aboutme: "关于我"
+      Archives: "存档"
+      Blogroll: "良师益友"        
+      Categories: "分类目录"    
+      Copyright_Notice: "版权声明"
+      Recent_Posts: "近期文章"
+      Tags: "标签" 
+      Previous: "前一页"
+      Next: "后一页"
+      PostedInCategories: "目录:"   
+      Taggedwith: "| 标签:"
+      PostDate: "| 发表时间: "
 
-# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
-# Used for Sitemap.xml and your RSS feed
-url: http://gelitenight.github.io
 
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-baseurl: ""
+### your Blogroll info, only name can shown on the page.
 
-#
-# !! You don't need to change any of the configuration flags below !!
-#
+Blogroll:
 
+
+### Build settings
 markdown: redcarpet
 highlighter: pygments
 permalink: /:title/
 redcarpet:
-  extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "disable_indented_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data", "hard_wrap"]
+  extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "disable_indented_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data", "hard_wrap", "lax_spacing", "footnotes"]
+paginate: 5
 
-# The release of Jekyll Now that you're using
-version: v1.1.0
-
-# Set the Sass partials directory, as we're using @imports
-sass:
-  style: :expanded # You might prefer to minify using :compressed
-
-# Use the following plug-ins
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-
-# Exclude these files from your production _site
-exclude:
-    - Gemfile
-    - Gemfile.lock
-    - LICENSE
-    - README.md
-    - CNAME
+excerpt_separator: <!--more-->
