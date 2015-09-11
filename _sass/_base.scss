@@ -201,6 +201,10 @@ blockquote{
   font-size: $small-font-size;
 }
 
+.highlighttable, pre {
+  line-height: 1.4em;
+}
+
 table.highlighttable {
   display: block;
   width: 100%;

@@ -19,6 +19,11 @@
         <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         {% endif %}
         {% endfor %}
+
+        <form onsubmit="search_google()" style="display: inline; float:right">
+          <input type="text" id="google-search" placeholder="Google search" />
+          <input type="submit" name="sa" value="Go" />
+        </form>
       </div>
     </nav>
 
