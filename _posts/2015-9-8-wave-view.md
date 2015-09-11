@@ -9,13 +9,13 @@ comments: true
 
 ## 效果图
 先上效果图
-![WaveView截图](/images/2015-9-8-Wave-View/screenshot.gif)
+![WaveView截图](/images/2015-9-8-wave-view/screenshot.gif)
 
 ---
 
 ## 实现
 ### WaveView的属性
-![WaveView的属性](/images/2015-9-8-Wave-View/terms.png)
+![WaveView的属性](/images/2015-9-8-wave-view/terms.png)
 <dl>
     <dt>Wate Level(水位)</dt>
     <dd>波浪静止时水面距离底部的高度</dd>
@@ -75,7 +75,7 @@ private void createShader() {
 
 绘制好的初始波形是下面这个样子：
 
-![初始波形](/images/2015-9-8-Wave-View/default-wave.png)
+![初始波形](/images/2015-9-8-wave-view/default-wave.png)
 
 代码第 9 ~ 27 行进行初始波形的绘制。波形由wave1和wave2两个波组成，wave2就是wave1向左偏移1/4的wave length，所以不需要重复计算。
 
