@@ -2,16 +2,18 @@
 layout: post
 title: "Android实现波浪效果 - WaveView"
 published: true
+categories: Android
+tags: [波浪, Wave]
+comments: true
 ---
 
 ## 效果图
----
 先上效果图
+![WaveView截图](/images/2015-9-8-Wave-View/screenshot.gif)
 
-![WaveView截图](../images/2015-9-8-Wave-View/screenshot.gif)
+---
 
 ## 实现
----
 ### WaveView的属性
 ![WaveView的属性](/images/2015-9-8-Wave-View/terms.png)
 <dl>
@@ -25,9 +27,10 @@ published: true
     <dd>波浪相对于初始位置的水平偏移</dd>
 </dl>
 
+<!--more-->
+
 ### 实现思路
 设想我们有一个画好波形的图片，那么我们只需要用这张图片填充（X轴方向重复，Y轴方向延伸）整个View，然后水平移动图片，就可以得到波浪效果了。
-
 所以要做的事很简单：绘制一个波形图，填充到View里，移动波形图。
 
 **1. 绘制初始波形**
@@ -90,7 +93,7 @@ mShaderMatrix.setScale(
         mAmplitudeRatio / DEFAULT_AMPLITUDE_RATIO,
         0,
         mDefaultWaterLevel);
-// translate shader according to mWaveShiftRatio and mWaterLevelRatio
+// translate shader according to mWaveShiftRatio and mWaterLevelRatio this decides the start position(mWaveShiftRatio for x, mWaterLevelRatio for 
 // this decides the start position(mWaveShiftRatio for x, mWaterLevelRatio for y) of waves
 mShaderMatrix.postTranslate(
         mWaveShiftRatio * getWidth(),
@@ -146,6 +149,7 @@ animators.add(amplitudeAnim);
 
 代码 20 ~ 26 行波浪的大小从大变小，再从小变大。
 
-## 源代码
 ---
-代码放在github上了：[WaveView](https://github.com/gelitenight/WaveView)
+
+## 源代码
+代码在github：[WaveView](https://github.com/gelitenight/WaveView)
