@@ -172,12 +172,11 @@ a {
  */
 
 blockquote{
-  padding: 0 1em;
+  padding: 0.5em 1em;
   margin: 14px 0;
-  border: 2px dashed #d0dfda;
-  border-radius: 5px;
+  border-left: 4px solid $grey-color;
   color: $grey-color;
-  font-size: 18px;
+  font-size: $small-font-size;
   background: #f9f9f9;
 
   &:hover {

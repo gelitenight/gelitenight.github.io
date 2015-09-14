@@ -154,3 +154,7 @@ animators.add(amplitudeAnim);
 
 ## 源代码
 代码在github：[WaveView](https://github.com/gelitenight/WaveView)
+
+> 本文遵循“[署名-非商业性使用-相同方式共享](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)”的创作共同协议，欢迎转载，转载时请注明作者和出处。
+> 作者: [gelitenight](mailto:gelitenight@gmail.com)
+> 出处: http://gelitenight.github.io/wave-view/
