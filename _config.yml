@@ -12,7 +12,7 @@ locale: cn
 ### Personal info and site tools info:
 twitter_username: 
 github_username:  gelitenight
-disqus_shortname: 
+disqus_shortname: gelitenight
 favicon: "/images/favicon.ico"
 aboutme: "安卓开发" # these are shown on aboutme-sidebar.
 aboutme_photo: # your photo.
