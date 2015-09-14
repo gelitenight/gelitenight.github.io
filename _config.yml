@@ -13,9 +13,9 @@ locale: cn
 twitter_username: 
 github_username:  gelitenight
 disqus_shortname: gelitenight
-favicon: "/images/favicon.ico"
+favicon: "/images/night_circle.png"
 aboutme: "安卓开发" # these are shown on aboutme-sidebar.
-aboutme_photo: # your photo.
+aboutme_photo: "/images/night_circle.png" # your photo.
 
 
 ### Site setting:

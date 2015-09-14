@@ -3,7 +3,7 @@ layout: post
 title: "Android实现波浪效果 - WaveView"
 published: true
 categories: Android
-tags: [波浪, Wave]
+tags: [波浪, Wave, 自定义View, 动画]
 comments: true
 ---
 
