@@ -64,7 +64,13 @@
     }
   }
 
-
+  .contact {
+  
+    display: inline;
+    float: right;
+    padding-top: 4px;
+  }
+  
   @include media-query($on-palm) {
     position: relative;
     background-color: $background-color;
