@@ -30,7 +30,7 @@
   line-height:56px;
   letter-spacing: -1px;
   margin-bottom: 0;
-  text-align:center; 
+  text-align:center;
   color: $grey-color;
 }
 
@@ -65,12 +65,12 @@
   }
 
   .contact {
-  
+
     display: inline;
     float: right;
     padding-top: 4px;
   }
-  
+
   @include media-query($on-palm) {
     position: relative;
     background-color: $background-color;
@@ -126,7 +126,7 @@
     color: $grey-color-dark;
   }
   li{
-    list-style: none; 
+    // list-style: none; 
   }
 
 }
@@ -141,7 +141,7 @@
   text-align: center;
   background-color: #f9f9f9;
   border-top: 1px solid $grey-color-light;
-  margin: $spacing-unit $spacing-unit-neg; 
+  margin: $spacing-unit $spacing-unit-neg;
   padding: $spacing-unit 0;
   font-size: 14px;
 }
@@ -205,8 +205,8 @@
   padding:20px 15px;
   li{
     padding-top:10px;
-    position:relative; 
-    list-style-type:none;  
+    position:relative;
+    list-style-type:none;
   }
 }
 
@@ -222,19 +222,19 @@
 
 
 .post-content {
-  p { padding:$spacing-unit/5 0; } 
+  p { padding:$spacing-unit/5 0; }
   //margin-bottom: $spacing-unit;
-  
+
   h1, h2, h3, h4, h5, h6 {
     margin: 20px 0 10px;
     padding: 0;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     cursor: text;
-    position: relative; 
+    position: relative;
   }
 
-  h1 { 
+  h1 {
     font-size: 32px;
     @include media-query($on-laptop){
       font-size: 32px;
@@ -336,4 +336,3 @@ q:after {
   color: #DD1144;
   font-weight:bold;
 }
-
