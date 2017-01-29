@@ -28,7 +28,7 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, 
+h1, h2, h3, h4,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
@@ -153,17 +153,17 @@ a {
 
 
 .post-content a{
-  color: $brand-color;    
-  text-decoration: none;  
+  color: $brand-color;
+  text-decoration: none;
   border-bottom: 1px dotted;
-  &:visited {             
+  &:visited {
     color: darken($brand-color, 25%);
-  }                       
+  }
 
-  &:hover {               
+  &:hover {
     color: $hover-color;
     text-decoration: none;
-  }  
+  }
 
 }
 
@@ -193,15 +193,20 @@ blockquote{
 /**
  * Code formatting
  */
-.highlighttable, pre, code {
+
+pre, code {
   border-radius: 3px;
   background-color: $code-backgroud-color;
   color: $code-font-color;
   font-size: $small-font-size;
 }
 
+pre code {
+    font-size: $code-font-size;
+}
+
 .highlighttable, pre {
-  line-height: 1.4em;
+  line-height: 1.3em;
 }
 
 table.highlighttable {
@@ -210,7 +215,7 @@ table.highlighttable {
   overflow: auto;
 
   tbody {
-    width: 100%;  
+    width: 100%;
   }
   tr {
     border-top: 1px solid #cccccc;
@@ -313,9 +318,9 @@ pre {
  */
 
 
-table { 
+table {
   padding: 0;
-  border-collapse: collapse; 
+  border-collapse: collapse;
   font-size: $small-font-size;
 }
 table tr {
@@ -350,7 +355,7 @@ hr{
   border-bottom: 1px dotted #ccc;
 }
 
-cite{ 
+cite{
   font-style: italic;
   text-decoration: underline;
 }
@@ -360,30 +365,30 @@ cite{
  */
 dl {
   font-size: 14px;
-  padding: 0; 
+  padding: 0;
 }
 dl dt {
   font-weight: bold;
   font-style: italic;
   padding: 0;
-  margin: 8px 0 5px; 
+  margin: 8px 0 5px;
 }
 dl dt:first-child {
-  padding: 0; 
+  padding: 0;
 }
 dl dt > :first-child {
-  margin-top: 0; 
+  margin-top: 0;
 }
 dl dt > :last-child {
-  margin-bottom: 0; 
+  margin-bottom: 0;
 }
 dl dd {
   margin: 0 0 8px;
-  padding: 0 2em; 
+  padding: 0 2em;
 }
 dl dd > :first-child {
-  margin-top: 0; 
+  margin-top: 0;
 }
 dl dd > :last-child {
-  margin-bottom: 0; 
+  margin-bottom: 0;
 }

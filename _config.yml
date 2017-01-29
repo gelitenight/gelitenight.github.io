@@ -10,7 +10,7 @@ url: "http://gelitenight.github.io" # the base hostname & protocol for your site
 locale: cn
 
 ### Personal info and site tools info:
-twitter_username: 
+twitter_username:
 github_username:  gelitenight
 disqus_shortname: gelitenight
 favicon: "/images/night_circle.png"
@@ -35,19 +35,19 @@ locales:
       Previous: "Older"
       Next: "Newer"
       PostedInCategories: "Posted in"
-      Taggedwith: "and tagged"  
+      Taggedwith: "and tagged"
       PostDate: "on "
     cn:
       Aboutme: "关于我"
       Archives: "存档"
-      Blogroll: "良师益友"        
-      Categories: "分类目录"    
+      Blogroll: "良师益友"
+      Categories: "分类目录"
       Copyright_Notice: "版权声明"
       Recent_Posts: "近期文章"
-      Tags: "标签" 
+      Tags: "标签"
       Previous: "前一页"
       Next: "后一页"
-      PostedInCategories: "目录:"   
+      PostedInCategories: "目录:"
       Taggedwith: "| 标签:"
       PostDate: "| 发表时间: "
 
@@ -56,13 +56,30 @@ locales:
 
 Blogroll:
 
-
 ### Build settings
-markdown: redcarpet
-highlighter: pygments
-permalink: /:title/
-redcarpet:
-  extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "disable_indented_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data", "hard_wrap", "lax_spacing", "footnotes"]
+#############################################
+# GitHub Pages & Jekyll override the following settings in your _config.yml file, which you cannot change:
+# lsi: false
+# safe: true
+# source: [your repo's top level directory]
+# incremental: false
+# highlighter: rouge
+# gist:
+#   noscript: false
+# kramdown:
+#   math_engine: mathjax
+#############################################
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+gems: [jekyll-paginate, jekyll-gist]
 paginate: 5
 
 excerpt_separator: <!--more-->

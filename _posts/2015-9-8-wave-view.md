@@ -9,12 +9,15 @@ comments: true
 
 ## 效果图
 先上效果图
+
 ![WaveView截图](/images/2015-9-8-wave-view/screenshot.gif)
 
 ---
 
 ## 实现
+
 ### WaveView的属性
+
 ![WaveView的属性](/images/2015-9-8-wave-view/terms.png)
 <dl>
     <dt>Wate Level(水位)</dt>
@@ -35,7 +38,8 @@ comments: true
 所以要做的事很简单：绘制一个波形图，填充到View里，移动波形图。
 
 **1. 绘制初始波形**
-{% highlight java linenos=table %}
+
+``` java
 private void createShader() {
     ...
 
@@ -68,7 +72,7 @@ private void createShader() {
     mWaveShader = new BitmapShader(bitmap, Shader.TileMode.REPEAT, Shader.TileMode.CLAMP);
     mViewPaint.setShader(mWaveShader);
 }
-{% endhighlight %}
+```
 
 首先一个长宽恰等于WaveView的Bitmap：`Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888)`。
 
@@ -86,7 +90,7 @@ private void createShader() {
 
 有了初始波形，当WaveView的属性改变时，只需要对初始波形进行相应的拉伸/压缩和位移就可以得到用户想要的波形。
 
-{% highlight java linenos=table %}
+``` java
 // sacle shader according to mWaveLengthRatio and mAmplitudeRatio
 // this decides the size(mWaveLengthRatio for width, mAmplitudeRatio for height) of waves
 mShaderMatrix.setScale(
@@ -94,7 +98,7 @@ mShaderMatrix.setScale(
         mAmplitudeRatio / DEFAULT_AMPLITUDE_RATIO,
         0,
         mDefaultWaterLevel);
-// translate shader according to mWaveShiftRatio and mWaterLevelRatio this decides the start position(mWaveShiftRatio for x, mWaterLevelRatio for 
+// translate shader according to mWaveShiftRatio and mWaterLevelRatio this decides the start position(mWaveShiftRatio for x, mWaterLevelRatio for
 // this decides the start position(mWaveShiftRatio for x, mWaterLevelRatio for y) of waves
 mShaderMatrix.postTranslate(
         mWaveShiftRatio * getWidth(),
@@ -106,7 +110,7 @@ mWaveShader.setLocalMatrix(mShaderMatrix);
 float radius = getWidth() / 2f
         - (mBorderPaint == null ? 0f : mBorderPaint.getStrokeWidth());
 canvas.drawCircle(getWidth() / 2f, getHeight() / 2f, radius, mViewPaint);
-{% endhighlight %}
+```
 
 代码 3 ~ 6 行对Shader进行拉伸/压缩，10 ~ 12 行对Shader进行水平/竖直平移。
 
@@ -115,7 +119,7 @@ canvas.drawCircle(getWidth() / 2f, getHeight() / 2f, radius, mViewPaint);
 
 **3. 动画**
 
-{% highlight java linenos=table %}
+``` java
 // horizontal animation.
 // wave waves infinitely.
 ObjectAnimator waveShiftAnim = ObjectAnimator.ofFloat(
@@ -142,7 +146,7 @@ amplitudeAnim.setRepeatMode(ValueAnimator.REVERSE);
 amplitudeAnim.setDuration(5000);
 amplitudeAnim.setInterpolator(new LinearInterpolator());
 animators.add(amplitudeAnim);
-{% endhighlight %}
+```
 
 代码 3 ~ 8 行让波形一直向右移动，效果就是波形一直在波动。
 
@@ -155,6 +159,6 @@ animators.add(amplitudeAnim);
 ## 源代码
 代码在github：[WaveView](https://github.com/gelitenight/WaveView)
 
-> 本文遵循“[署名-非商业性使用-相同方式共享](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)”的创作共同协议，欢迎转载，转载时请注明作者和出处。
-> 作者: [gelitenight](mailto:gelitenight@gmail.com)
+> 本文遵循“[署名-非商业性使用-相同方式共享](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)”的创作共同协议，欢迎转载，转载时请注明作者和出处。  
+> 作者: [gelitenight](mailto:gelitenight@gmail.com)  
 > 出处: http://gelitenight.github.io/wave-view/

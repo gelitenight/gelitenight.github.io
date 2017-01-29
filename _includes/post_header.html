@@ -7,7 +7,7 @@
     {{ site.locales[site.default_locale].PostedInCategories }}
     {% for cat in include.param.categories %}
     <a href="{{site.baseurl}}/categories/#{{ cat }}">{{ cat }}</a>&nbsp;
-    {% endfor %} 
+    {% endfor %}
     {% if include.param.tags != empty %}
     {{ site.locales[site.default_locale].Taggedwith }}
     {% for tag in include.param.tags %}
