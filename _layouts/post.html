@@ -7,6 +7,11 @@ layout: default_post
 
   <article class="post-content" itemprop="articleBody">
     {{ content }}
+    <blockquote>
+  <p>本文遵循“<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh">署名-非商业性使用-相同方式共享</a>”的创作共同协议，欢迎转载，转载时请注明作者和出处。<br>
+作者: <a href="mailto:gelitenight@gmail.com">gelitenight</a><br>
+出处: <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></p>
+</blockquote>
   </article>
   <hr />
 </div>
@@ -14,4 +19,3 @@ layout: default_post
 
 {% include page_pagination.html%}
 {% include comments.html %}
-
