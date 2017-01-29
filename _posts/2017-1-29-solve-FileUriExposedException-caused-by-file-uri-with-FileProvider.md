@@ -157,6 +157,8 @@ external-cache-path | Context.getExternalCacheDir()
       2. 用path的值替换掉文件路径里所匹配的内容。
 3. 文件路径剩余的部分保持不变。
 
+![file uri to content uri](/images/2017-1-29-solve-FileUriExposedException-caused-by-file-uri-with-FileProvider/file-uri-to-content-uri.png)
+
 
 需要注意的是，文件的路径必须包含在xml中，也就是2.1中必须能找到一个匹配的子节点，否则会抛出异常：
 
