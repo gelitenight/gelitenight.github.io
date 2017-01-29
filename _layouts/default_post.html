@@ -9,12 +9,14 @@
 
   {% include header.html %}
 
-  
+
 
   <div class="page-content">
+    <div id="toc" style="display: block;width: 200px;position: fixed;margin-left: -230px;margin-top: -80px"></div>
     <div class="wrapper">
       {{ content }}
     </div>
+
   </div>
   {% include post_pagination.html %}
 
