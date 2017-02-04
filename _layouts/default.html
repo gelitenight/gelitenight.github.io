@@ -7,28 +7,28 @@
 
 <div class="container">
 
-  {% include header.html %}
+    {% include header.html %}
 
-  {% if site.default_column == "two" %}  
+    {% if site.default_column == "two" %}
 
-  <div class="page-content col-sm-8">
-    {{ content }}
-    {% include post_pagination.html %}
-  </div>
-  {% include sidebar.html %}
+        <div class="page-content col-sm-8">
+            {{ content }}
+            {% include post_pagination.html %}
+        </div>
+        {% include sidebar.html %}
 
-  {% else %}
+    {% else %}
 
-  <div class="page-content">
-    <div class="wrapper">
-      {{ content }}
-    </div>
-  </div>
-  {% include post_pagination.html %}
+        <div class="page-content">
+            <div class="wrapper">
+                {{ content }}
+            </div>
+        </div>
+        {% include post_pagination.html %}
 
-  {% endif %}
+    {% endif %}
 
-  {% include footer.html %}
+    {% include footer.html %}
 
 </div>
 

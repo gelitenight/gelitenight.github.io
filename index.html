@@ -3,23 +3,23 @@ layout: default
 ---
 
 <div class="home">
-  <div class="post" itemscope itemtype="http://schema.org/BlogPosting" >
-    
-    {% for post in paginator.posts %}
-  
-    {% include post_header.html param=post %}
+    <div class="post" itemscope itemtype="http://schema.org/BlogPosting" >
 
-    <article class="post-content" itemprop="articleBody">
-      {% if post.content contains site.excerpt_separator %}
-      {{ post.excerpt }}
-      <p style="text-align: right"><a href="{{ post.url | prepend: site.baseurl }}">详情...</a></p>
-      {% else %}
-      {{ post.content }}
-      {% endif %}
-    </article>
-    <hr />
-    
-    {% endfor %}
-  
-  </div>
+        {% for post in paginator.posts %}
+
+        {% include post_header.html param=post %}
+
+        <article class="post-content" itemprop="articleBody">
+            {% if post.content contains site.excerpt_separator %}
+                {{ post.excerpt }}
+                <p style="text-align: right"><a href="{{ post.url | prepend: site.baseurl }}">详情...</a></p>
+            {% else %}
+                {{ post.content }}
+            {% endif %}
+        </article>
+        <hr />
+
+        {% endfor %}
+
+    </div>
 </div>
